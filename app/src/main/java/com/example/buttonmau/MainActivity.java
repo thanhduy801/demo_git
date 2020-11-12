@@ -3,6 +3,7 @@ package com.example.buttonmau;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -18,7 +19,7 @@ import static android.R.color.black;
 
 public class MainActivity extends AppCompatActivity{
 
-    Button btncolor,btnsave ;
+    Button btncolor,btnsave ,btnchuyen;
     LinearLayout bgr;
     Integer a;
 
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
 
         //ánh xạ
+        btnchuyen=(Button) findViewById(R.id.btn_2);
         bgr = (LinearLayout) findViewById(R.id.bgr_color);
         btncolor = (Button) findViewById(R.id.btn_color);
         btnsave = (Button) findViewById(R.id.btn_save);
@@ -65,7 +67,16 @@ public class MainActivity extends AppCompatActivity{
                 editor.commit();
             }
         });
+        btnchuyen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent duy=new Intent(MainActivity.this,DeMo.class);
+                startActivity(duy);
+            }
+        });
+
     }
+
 
 
     //hàm lấy màu background đã save, để hiển thị lên background khi bật app trở lại
