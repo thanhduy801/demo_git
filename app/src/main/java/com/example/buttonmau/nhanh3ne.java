@@ -1,4 +1,7 @@
 package com.example.buttonmau;
 
-public class nhanh3ne {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class nhanh3ne extends AppCompatActivity {
+
 }
