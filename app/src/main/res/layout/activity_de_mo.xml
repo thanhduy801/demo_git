@@ -9,4 +9,9 @@
     android:background="@drawable/ic_launcher_foreground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
